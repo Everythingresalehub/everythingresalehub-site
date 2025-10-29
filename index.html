@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>EverythingResaleHub — Quality Finds, Fair Prices</title>
+  <meta name="description" content="Curated resale goods. Honest quality, fast shipping, and friendly service." />
+  <meta property="og:title" content="EverythingResaleHub" />
+  <meta property="og:description" content="Curated resale goods. Honest quality, fast shipping, and friendly service." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://everythingresalehub.com/" />
+  <!-- Replace these placeholder logo paths with your real files in /assets/ -->
+  <link rel="icon" href="/assets/logo-32.png" sizes="32x32" />
+  <link rel="icon" href="/assets/logo-192.png" sizes="192x192" />
+  <link rel="apple-touch-icon" href="/assets/logo-180.png" />
+  <meta property="og:image" content="https://everythingresalehub.com/assets/og-card.png" />
+  <meta name="theme-color" content="#0b0c10" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Store",
+    "name": "EverythingResaleHub",
+    "url": "https://everythingresalehub.com/",
+    "email": "sales@everythingresalehub.com",
+    "telephone": "+1-253-339-6797",
+    "areaServed": ["Puyallup", "South Hill", "Washington", "USA"],
+    "sameAs": [
+      "https://www.instagram.com/yourhandle",
+      "https://www.facebook.com/yourpage"
+    ]
+  }
+  </script>
+  <style>
+    :root {
+      --bg: #0b0c10; /* deep charcoal */
+      --surface: #111318; /* card surface */
+      --text: #e6e6e6; /* primary text */
+      --muted: #b8c0cc; /* secondary text */
+      --accent: #4fd1c5; /* teal */
+      --accent-2: #a78bfa; /* soft purple */
+      --ring: rgba(79,209,197,0.4);
+    }
+
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Noto Sans, Ubuntu, Cantarell, Helvetica Neue, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      background: radial-gradient(1200px 800px at 10% -10%, rgba(167,139,250,0.2), transparent 40%),
+                  radial-gradient(1000px 600px at 90% -10%, rgba(79,209,197,0.18), transparent 40%),
+                  var(--bg);
+      color: var(--text);
+      line-height: 1.55;
+    }
+
+    .container {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 24px;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 12px 0 24px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: var(--text);
+    }
+
+    .logo {
+      width: 44px; height: 44px; border-radius: 12px;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      display: grid; place-items: center; font-weight: 900; letter-spacing: -0.02em;
+      color: #0b0c10;
+      box-shadow: 0 10px 30px rgba(79,209,197,0.25), 0 8px 20px rgba(167,139,250,0.2);
+      overflow: hidden;
+    }
+    .logo-img { width: 100%; height: 100%; object-fit: contain; display:block; }
+    .mark {
+      position:absolute; right:14px; top:14px; width:56px; height:56px; border-radius:14px;
+      background: #0d0f13cc; display:grid; place-items:center; border:1px solid rgba(255,255,255,0.08);
+    }
+    .mark img { width: 80%; height: 80%; object-fit: contain; filter: drop-shadow(0 6px 18px rgba(0,0,0,0.5)); }
+    .footer-logo { width:22px; height:22px; border-radius:6px; vertical-align:middle; margin-right:8px; }
+
+    nav a {
+      color: var(--muted);
+      text-decoration: none;
+      margin-left: 16px;
+      padding: 8px 10px;
+      border-radius: 10px;
+    }
+    nav a:hover { color: var(--text); background: rgba(255,255,255,0.04); }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 28px;
+      align-items: center;
+    }
+
+    @media (max-width: 900px) {
+      .hero { grid-template-columns: 1fr; }
+      nav { display:none; }
+    }
+
+    h1 {
+      font-size: clamp(28px, 3.8vw, 46px);
+      line-height: 1.1;
+      margin: 0 0 14px;
+      letter-spacing: -0.02em;
+    }
+
+    .lead { color: var(--muted); font-size: clamp(16px, 2vw, 18px); margin-bottom: 20px; }
+
+    .cta-row { display: flex; gap: 12px; flex-wrap: wrap; }
+
+    .btn {
+      display: inline-flex; align-items: center; gap: 10px;
+      padding: 12px 16px; border-radius: 14px; text-decoration: none;
+      font-weight: 600; letter-spacing: 0.01em;
+      border: 1px solid rgba(255,255,255,0.08);
+      background: rgba(255,255,255,0.03);
+      color: var(--text);
+      backdrop-filter: blur(8px);
+    }
+    .btn:hover { background: rgba(255,255,255,0.06); }
+    .btn.primary { background: linear-gradient(135deg, var(--accent), var(--accent-2)); color: #0b0c10; border: none; }
+    .btn.primary:hover { filter: brightness(1.08); }
+
+    .card {
+      background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 20px;
+      padding: 22px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    }
+
+    .grid { display: grid; gap: 16px; grid-template-columns: repeat(3, 1fr); }
+    @media (max-width: 900px) { .grid { grid-template-columns: 1fr; } }
+
+    .badge { display:inline-block; padding: 6px 10px; border-radius: 999px; font-size: 12px; color: #0b0c10; background: var(--accent); font-weight:700; }
+
+    footer { color: var(--muted); font-size: 14px; padding: 32px 0 48px; }
+    footer a { color: var(--text); text-decoration: none; }
+
+    .kicker { text-transform: uppercase; letter-spacing: 0.18em; font-size: 12px; color: var(--muted); }
+
+    .list { margin: 0; padding: 0 0 0 18px; }
+      /* Grade rank chips */
+    .chip { display:inline-flex; align-items:center; gap:6px; padding:4px 10px; border-radius:999px; font-weight:700; font-size:12px; border:1px solid rgba(255,255,255,0.12); background: rgba(255,255,255,0.04); color: var(--text); }
+    .chip small { font-weight:600; color: var(--muted); }
+    .grade-a { background: rgba(79,209,197,0.18); border-color: rgba(79,209,197,0.45); }
+    .grade-b { background: rgba(167,139,250,0.18); border-color: rgba(167,139,250,0.45); }
+    .grade-c { background: rgba(234,179,8,0.18); border-color: rgba(234,179,8,0.45); }
+    .grade-d { background: rgba(239,68,68,0.18); border-color: rgba(239,68,68,0.45); }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <a class="brand" href="#">
+        <div class="logo" aria-hidden="true">
+  <svg viewBox="0 0 44 44" role="img" aria-label="EverythingResaleHub logo" width="44" height="44">
+    <rect width="44" height="44" rx="12" fill="transparent"/>
+    <text x="50%" y="54%" text-anchor="middle" font-size="18" font-weight="800" fill="#0b0c10" font-family="ui-sans-serif, -apple-system, Segoe UI, Roboto, Helvetica, Arial">ER</text>
+  </svg>
+</div>
+        <div>
+          <strong>EverythingResaleHub</strong><br/>
+          <span class="kicker">Quality Finds • Fair Prices</span>
+        </div>
+      </a>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#catalog">Catalog</a>
+        <a href="#shipping">Shipping</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div>
+        <span class="badge">New</span>
+        <h1>Your trusted spot for curated resale goods</h1>
+        <p class="lead">Smart bargains, tested quality, and friendly support. Fresh inventory weekly. Local pickup by appointment and fast nationwide shipping.</p>
+        <div class="cta-row">
+          <a class="btn primary" href="#catalog">Browse Highlights</a>
+          <a class="btn" href="#contact">Message Us</a>
+        </div>
+      </div>
+      <div class="card" style="position:relative">
+        <div class="mark" aria-hidden="true">
+  <svg viewBox="0 0 44 44" width="44" height="44" role="img" aria-label="ER">
+    <rect width="44" height="44" rx="12" fill="url(#g)"></rect>
+    <defs>
+      <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stop-color="#4fd1c5"/>
+        <stop offset="100%" stop-color="#a78bfa"/>
+      </linearGradient>
+    </defs>
+    <text x="50%" y="54%" text-anchor="middle" font-size="18" font-weight="800" fill="#0b0c10" font-family="ui-sans-serif, -apple-system, Segoe UI, Roboto, Helvetica, Arial">ER</text>
+  </svg>
+</div>
+        <h3 style="margin-top:0">Today’s Highlights</h3>
+        <ul class="list">
+          <li>Electronics: gently used, fully tested</li>
+          <li>Home & Kitchen: clean, ready to use</li>
+          <li>Collectibles: verified condition, clear photos</li>
+        </ul>
+        <p style="color:var(--muted); margin-bottom:0">Want first dibs? Join the email list below.</p>
+      </div>
+    </section>
+
+    <section id="about" style="margin-top:42px" class="grid">
+      <div class="card">
+        <h3 style="margin-top:0">About Us</h3>
+        <p>EverythingResaleHub is a small, detail‑oriented resale shop focused on honest descriptions and fast shipping. Every item is checked, cleaned, and packed with care.</p>
+        <p class="kicker">Based in the Puyallup / South Hill area • Ships USA‑wide</p>
+      </div>
+      <div class="card">
+        <h3 style="margin-top:0">Quick Facts</h3>
+        <ul class="list">
+          <li>Email: <a href="mailto:sales@everythingresalehub.com">sales@everythingresalehub.com</a></li>
+          <li>Phone: <a href="tel:+12533396797">(253) 339‑6797</a></li>
+          <li>Hours: Online 24/7 • Local pickup by appointment</li>
+          <li>Payments: PayPal invoice or Square; sales tax where required</li>
+          <li>Shipping: Within 2 business days; tracking via email</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3 style="margin-top:0">Guarantee</h3>
+        <p>Not as described? Contact us within 7 days of delivery for a quick resolution or refund. Clear communication, no runaround.</p>
+      </div>
+    </section>
+
+    <section id="catalog" style="margin-top:42px">
+      <div class="card">
+        <h3 style="margin-top:0; display:flex; align-items:center; gap:10px">
+          <img src="/assets/logo-32.png" alt="ER" width="24" height="24" style="border-radius:6px" />
+          Catalog (Starter Layout)
+        </h3>
+        <p>Add your items below. Each item is a simple block you can duplicate.</p>
+        <div class="grid">
+          <div class="card">
+            <strong>Sample Item A</strong>
+            <p class="kicker">Condition: Very Good • <span class="chip grade-b">B</span></p>
+            <p style="margin-top:8px">Short description goes here. What’s included, key specs, any cosmetic notes.</p>
+            <a class="btn" href="#contact">Request to Buy</a>
+          </div>
+          <div class="card">
+            <strong>Sample Item B</strong>
+            <p class="kicker">Condition: Like New • <span class="chip grade-a">A</span></p>
+            <p style="margin-top:8px">Short description goes here. What’s included, key specs, any cosmetic notes.</p>
+            <a class="btn" href="#contact">Request to Buy</a>
+          </div>
+          <div class="card">
+            <strong>Sample Item C</strong>
+            <p class="kicker">Condition: Good • <span class="chip grade-c">C</span></p>
+            <p style="margin-top:8px">Short description goes here. What’s included, key specs, any cosmetic notes.</p>
+            <a class="btn" href="#contact">Request to Buy</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="shipping" style="margin-top:42px" class="grid">
+      <div class="card" id="shipping-policy">
+        <h3 style="margin-top:0">Shipping</h3>
+        <ul class="list">
+          <li>Orders ship within <strong>2 business days</strong></li>
+          <li>Carrier: USPS or UPS based on size/weight</li>
+          <li>Tracking emailed automatically</li>
+          <li>Local pickup available (Puyallup / South Hill) — message to schedule</li>
+        </ul>
+      </div>
+      <div class="card" id="returns">
+        <h3 style="margin-top:0">Returns &amp; Warranty</h3>
+        <ul class="list">
+          <li>Returns accepted within <strong>7 days</strong> if an item is misdescribed or DOA</li>
+          <li>Buyer’s remorse returns: case‑by‑case; restocking may apply</li>
+          <li>Please retain original packaging for return shipment</li>
+        </ul>
+      </div>
+      <div class="card" id="payment">
+        <h3 style="margin-top:0">Payment</h3>
+        <p>Invoices via <strong>PayPal</strong> or <strong>Square</strong>. Sales tax collected where required. For local pickup, cash is accepted.</p>
+      </div>
+    </section>
+
+    <section id="grading" style="margin-top:42px" class="grid">
+      <div class="card">
+        <h3 style="margin-top:0">Condition Grade Rank</h3>
+        <p class="kicker">Fast mapping: A = Like New • B = Very Good • C = Good • D = Fair</p>
+        <ul class="list">
+          <li><span class="chip grade-a">A <small>(Like New)</small></span> Minimal or no signs of use. Fully functional. All accessories unless noted.</li>
+          <li><span class="chip grade-b">B <small>(Very Good)</small></span> Light cosmetic wear (small scuffs). Fully functional. Missing minor accessories possible.</li>
+          <li><span class="chip grade-c">C <small>(Good)</small></span> Noticeable wear or cosmetic marks. Fully functional or minor non‑critical issues disclosed.</li>
+          <li><span class="chip grade-d">D <small>(Fair)</small></span> Heavy wear or functional quirks. Still usable; issues clearly described and priced accordingly.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="faq" style="margin-top:42px" class="grid">
+      <div class="card">
+        <h3 style="margin-top:0">FAQ</h3>
+        <p><strong>Q: Do you test items?</strong><br/>A: Yes. We function‑test electronics and note any cosmetic flaws in the listing.</p>
+        <p><strong>Q: Do you accept holds?</strong><br/>A: Short holds are possible with a small deposit. Message us.</p>
+        <p><strong>Q: Do you take special requests?</strong><br/>A: Yes—tell us what you’re hunting for and we’ll keep an eye out.</p>
+      </div>
+    </section>
+
+    <section id="legal" style="margin-top:42px" class="grid">
+      <div class="card" id="privacy">
+        <h3 style="margin-top:0">Privacy (Short)</h3>
+        <p>We only collect the info needed to process your order (contact, shipping, payment). We don’t sell your data. Third‑party processors (PayPal/Square, shipping carriers) handle their part under their own policies.</p>
+      </div>
+      <div class="card" id="terms">
+        <h3 style="margin-top:0">Terms (Short)</h3>
+        <p>By purchasing, you agree to accurate shipping info and timely payment. Items are sold as described with the return policy above. Misuse or unauthorized modification voids any guarantee.</p>
+      </div>
+      <div class="card" id="refund">
+        <h3 style="margin-top:0">Refund Policy (Short)</h3>
+        <p>Refunds are issued upon return receipt and inspection when an item is misdescribed/DOA. Original shipping may be non‑refundable unless we made a mistake.</p>
+      </div>
+    </section>
+
+    <section id="contact" style="margin-top:42px">
+      <div class="card">
+        <h3 style="margin-top:0">Contact</h3>
+        <p>Email: <a href="mailto:sales@everythingresalehub.com">sales@everythingresalehub.com</a></p>
+        <p>Phone: <a href="tel:+12533396797">(253) 339‑6797</a></p>
+        <p>Instagram / Facebook: add your links here</p>
+        <form action="https://formspree.io/f/your-form-id" method="POST" style="margin-top:14px">
+          <input type="email" name="email" placeholder="Your email" required style="width:100%;padding:12px;border-radius:10px;border:1px solid rgba(255,255,255,0.12);background:#0d0f13;color:var(--text);outline:none;box-shadow:0 0 0 0 var(--ring);" onfocus="this.style.boxShadow='0 0 0 4px var(--ring)';" onblur="this.style.boxShadow='0 0 0 0 var(--ring)';" />
+          <textarea name="message" placeholder="What are you looking for?" rows="4" style="margin-top:10px;width:100%;padding:12px;border-radius:10px;border:1px solid rgba(255,255,255,0.12);background:#0d0f13;color:var(--text);"></textarea>
+          <button class="btn primary" type="submit" style="margin-top:10px">Send</button>
+        </form>
+        <p class="kicker" style="margin-top:10px">Replace the form action with your Formspree or other endpoint.</p>
+      </div>
+    </section>
+
+    <footer>
+      <img class="footer-logo" src="/assets/logo-32.png" alt="ER" />© <span id="y"></span> EverythingResaleHub • All rights reserved
+      <br/>
+      <a href="#privacy">Privacy</a> • <a href="#terms">Terms</a> • <a href="#refund">Refunds</a> • <a href="#contact">Contact</a> • <a href="tel:+12533396797">Call (253) 339‑6797</a>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
